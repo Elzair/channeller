@@ -13,7 +13,7 @@ To install **Channeller** into your project, `cd` to the top-level directory of 
 Use
 ---
 
-The following example shows how to use **Channeller** to handle events across multiple modules. You can find the two files and run the example in *examples/multi-module*.
+The following example shows how to use **Channeller** to handle events across multiple modules. You can find the two files and run the example in the directory *examples/multi-module*.
 
 The first file, *callee.js*, defines the function to be called.
 
