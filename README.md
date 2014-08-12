@@ -40,19 +40,14 @@ exports.startContinuousFunction = function() {
 The second file, *caller.js*, defines the code that calls `callee.startContinuousFunction`.
 
 ```javascript
-var callee = require(__dirname + '/callee'); // Require module defined above
+var callee = require(__dirname + '/callee');
 
-var call = function() {
-  var channeller = callee.startContinuousFunction(); // Execute continuously running function that returns a channeller
+var channeller = callee.startContinuousFunction();
 
-  // Tell the channeller to stop the function after .3 seconds.
-  setTimeout(function() {
-    channeller.handle('stop');
-    console.log('Callee stopped!');
-  }, 300);
-};
-
-call(); // Execute the code
+setTimeout(function() {
+  channeller.handle('stop');
+  console.log('Callee stopped!');
+}, 300);
 ```
 
 Now, run the example `node caller.js` and you should see the following output.
