@@ -1,6 +1,6 @@
 {
   "name": "channeller",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Simple Javascript library for sending messages to an object and handling them in the object",
   "main": "index.js",
   "scripts": {
