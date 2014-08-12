@@ -1,0 +1,15 @@
+{
+  "name": "channeller-multi-module-example",
+  "version": "1.0.0",
+  "description": "Example of using channeller across two modules",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node caller.js"
+  },
+  "keywords": [
+    "example",
+    "channeller"
+  ],
+  "author": "Philip Woods",
+  "license": "MIT"
+}

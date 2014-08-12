@@ -12,5 +12,8 @@
       , "__dirname": false
       , "module" : false
       , "exports" : false
+      , "setTimeout" : false
+      , "setInterval" : false
+      , "clearInterval" : false
     }
 }

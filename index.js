@@ -1,23 +1,20 @@
 var channeller = {
-    messageHandlers: {
+    events: {
       error: function(msg) {
-        console.error(msg);
+        throw new Error(msg);
       }
     }
-  , on: function(msg, handler) {
-      this.messageHandlers[msg] = msg !== 'error' ? handler : this.messageHandlers.error;
+  , on: function(event, handler) {
+      this.events[event] = handler;
     }
-  , handle: function(msg) {
-      if (this.handlers.hasOwnProperty(msg)) {
-        this.handlers[msg]();
-      }
-      else {
-        this.handlers.error();
-      }
+  , handle: function(event) {
+      if (this.events.hasOwnProperty(event))
+        this.events[event]();
+      else
+        this.events.error();
     }
 };
 
 exports.createChanneller = function(obj) {
-  obj = obj || {};
-  return Object.create(channeller, obj);
+  return Object.create(channeller, obj || {});
 };
