@@ -18,7 +18,7 @@ The following example shows how to use **Channeller** to handle events across mu
 The first file, *callee.js*, defines the function to be called.
 
 ```javascript
-var channeller = require(__dirname+'/../../'); // Require channeller library
+var channeller = require('channeller'); // Require channeller library
 
 exports.startContinuousFunction = function() {
   // Create function that continuously runs
