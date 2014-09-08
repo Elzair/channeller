@@ -1,3 +1,5 @@
+var protolib = require('protolib');
+
 var channeller = {
     events: {
       error: function(msg) {
@@ -8,13 +10,21 @@ var channeller = {
       this.events[event] = handler;
     }
   , handle: function(event) {
-      if (this.events.hasOwnProperty(event))
+      if (this.events.hasOwnProperty(event)) {
         this.events[event]();
-      else
+      }
+      else {
         this.events.error();
+      }
     }
 };
 
-exports.createChanneller = function(obj) {
-  return Object.create(channeller, obj || {});
+exports.createChanneller = function(object) {
+  if (object && typeof object === 'object') {
+    protolib.mixin(object, channeller);
+    return object;
+  }
+  else {
+    return protolib.clone(channeller);
+  }
 };
