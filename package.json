@@ -1,6 +1,6 @@
 {
   "name": "channeller",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Simple Javascript library for sending messages to an object and handling them in the object",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/Elzair/channeller",
   "dependencies": {
-    "protolib": "^0.1.0"
+    "protolib": "^0.2.0"
   }
 }
